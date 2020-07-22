@@ -23,11 +23,11 @@ func main() {
 	}
 	tgBotToken, ok := os.LookupEnv("TG_BOT_TOKEN")
 	if !ok {
-		log.Fatal("WEB_SERVER_ADDR env not set")
+		log.Fatal("TG_BOT_TOKEN env not set")
 	}
 	tgChatID, ok := os.LookupEnv("TG_CHAT_ID")
 	if !ok {
-		log.Fatal("WEB_SERVER_ADDR env not set")
+		log.Fatal("TG_CHAT_ID env not set")
 	}
 	chatID, err := strconv.ParseInt(tgChatID, 10, 64)
 	if err != nil {
